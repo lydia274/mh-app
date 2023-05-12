@@ -5,7 +5,7 @@ import Nav from "./components/Nav.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import Browse from "./pages/Browse.jsx";
 import BrowseItem from "./pages/BrowseItem.jsx";
-import DisplayLog from "./displaylog";
+import DisplayLog from "./pages/DisplayLog.jsx";
 import Log from "./components/Log.jsx";
 
 function App() {

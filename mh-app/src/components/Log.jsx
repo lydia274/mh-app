@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DisplayLog from "../pages/DisplayLog";
 
 const Log = () => {
   const [form, setForm] = useState({
@@ -67,66 +68,69 @@ const Log = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="date">Date:</label>
-        <input
-          type="date"
-          id="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="thoughts">Thoughts:</label>
-        <textarea
-          id="thoughts"
-          name="thoughts"
-          value={form.thoughts}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="gratitude">Gratitude:</label>
-        <textarea
-          id="gratitude"
-          name="gratitude"
-          value={form.gratitude}
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="mood">Mood (0-10):</label>
-        <input
-          type="number"
-          id="mood"
-          name="mood"
-          min="0"
-          max="10"
-          value={form.mood}
-          onChange={handleChange}
-        />
-      </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={form.date}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="thoughts">Thoughts:</label>
+          <textarea
+            id="thoughts"
+            name="thoughts"
+            value={form.thoughts}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="gratitude">Gratitude:</label>
+          <textarea
+            id="gratitude"
+            name="gratitude"
+            value={form.gratitude}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="mood">Mood (0-10):</label>
+          <input
+            type="number"
+            id="mood"
+            name="mood"
+            min="0"
+            max="10"
+            value={form.mood}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        {itemsList.map((item, index) => (
-          <div key={index}>
-            <label>
-              <input
-                type="checkbox"
-                name={`item-${index}`}
-                checked={form.items[item] || false}
-                onChange={() => handleButtonClick(item)}
-              />
-              {item}
-            </label>
-          </div>
-        ))}
-      </div>
+        <div>
+          {itemsList.map((item, index) => (
+            <div key={index}>
+              <label>
+                <input
+                  type="checkbox"
+                  name={`item-${index}`}
+                  checked={form.items[item] || false}
+                  onChange={() => handleButtonClick(item)}
+                />
+                {item}
+              </label>
+            </div>
+          ))}
+        </div>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+      <DisplayLog logs={logs} />
+    </div>
   );
 };
 
