@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Log = () => {
   const [logEntries, setLogEntries] = useState([]);
@@ -8,8 +8,6 @@ const Log = () => {
     gratitude: "",
     mood: 0,
   });
-  const messages = ["Keep going!", "You can do it!", "Believe in yourself!"];
-  const [cheerMessage, setCheerMessage] = useState("");
 
   const itemsList = [
     "Get support",
@@ -37,7 +35,28 @@ const Log = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLogEntries([...logEntries, form]);
+
+    const newLogEntry = {
+      date: form.date,
+      thoughts: form.thoughts,
+      gratitude: form.gratitude,
+      mood: form.mood,
+    };
+
+    fetch("https://ironrest.fly.dev/api/mh-app-log", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newLogEntry),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
     setForm({
       date: "",
@@ -45,8 +64,6 @@ const Log = () => {
       gratitude: "",
       mood: 0,
     });
-
-    setCheerMessage(messages[Math.floor(Math.random() * messages.length)]);
   };
 
   const handleButtonClick = (index) => {
@@ -97,12 +114,10 @@ const Log = () => {
           onChange={handleChange}
         />
       </div>
-      <button type="submit">Submit</button>
-      {cheerMessage && <p>{cheerMessage}</p>}
+
       <div>
         {itemsList.map((item, index) => (
           <div key={index}>
-            <h3>{item}</h3>
             <button
               style={{
                 width: "100px",
@@ -111,11 +126,12 @@ const Log = () => {
               }}
               onClick={() => handleButtonClick(index)}
             >
-              {buttonStates[index] ? "True" : "False"}
+              {item}
             </button>
           </div>
         ))}
       </div>
+      <button type="submit">Submit</button>
     </form>
   );
 };
