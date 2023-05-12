@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Log = () => {
-  const [logEntries, setLogEntries] = useState([]);
   const [form, setForm] = useState({
     date: "",
     thoughts: "",
     gratitude: "",
     mood: 0,
+    items: {},
   });
 
   const itemsList = [
@@ -22,10 +23,6 @@ const Log = () => {
     "Face your fears",
   ];
 
-  const [buttonStates, setButtonStates] = useState(
-    new Array(itemsList.length).fill(false)
-  );
-
   const handleChange = (event) => {
     setForm({
       ...form,
@@ -33,7 +30,14 @@ const Log = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleButtonClick = (item) => {
+    setForm((prevState) => ({
+      ...prevState,
+      items: { ...prevState.items, [item]: !prevState.items[item] },
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const newLogEntry = {
@@ -41,35 +45,25 @@ const Log = () => {
       thoughts: form.thoughts,
       gratitude: form.gratitude,
       mood: form.mood,
+      items: itemsList.filter((item) => form.items[item]),
     };
 
-    fetch("https://ironrest.fly.dev/api/mh-app-log", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newLogEntry),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
+    try {
+      const response = await axios.post(
+        "https://ironrest.fly.dev/api/mh-app-log",
+        newLogEntry
+      );
+      console.log(response.data);
+      setForm({
+        date: "",
+        thoughts: "",
+        gratitude: "",
+        mood: 0,
+        items: {},
       });
-
-    setForm({
-      date: "",
-      thoughts: "",
-      gratitude: "",
-      mood: 0,
-    });
-  };
-
-  const handleButtonClick = (index) => {
-    const newButtonStates = [...buttonStates];
-    newButtonStates[index] = !newButtonStates[index];
-    setButtonStates(newButtonStates);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -118,19 +112,19 @@ const Log = () => {
       <div>
         {itemsList.map((item, index) => (
           <div key={index}>
-            <button
-              style={{
-                width: "100px",
-                height: "50px",
-                backgroundColor: buttonStates[index] ? "green" : "red",
-              }}
-              onClick={() => handleButtonClick(index)}
-            >
+            <label>
+              <input
+                type="checkbox"
+                name={`item-${index}`}
+                checked={form.items[item] || false}
+                onChange={() => handleButtonClick(item)}
+              />
               {item}
-            </button>
+            </label>
           </div>
         ))}
       </div>
+
       <button type="submit">Submit</button>
     </form>
   );
