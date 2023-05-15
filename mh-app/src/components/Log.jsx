@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DisplayLog from "../pages/DisplayLog";
 
@@ -23,6 +23,14 @@ const Log = () => {
     "Monitor your mood",
     "Face your fears",
   ];
+
+  const [logs, setLogs] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://ironrest.fly.dev/api/mh-app-log")
+      .then((response) => setLogs(response.data))
+      .catch((error) => console.error(error));
+  }, []);
 
   const handleChange = (event) => {
     setForm({
@@ -129,7 +137,6 @@ const Log = () => {
 
         <button type="submit">Submit</button>
       </form>
-      <DisplayLog logs={logs} />
     </div>
   );
 };

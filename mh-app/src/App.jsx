@@ -7,6 +7,7 @@ import Browse from "./pages/Browse.jsx";
 import BrowseItem from "./pages/BrowseItem.jsx";
 import DisplayLog from "./pages/DisplayLog.jsx";
 import Log from "./components/Log.jsx";
+import LogItem from "./pages/LogItem.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/browse/:id" element={<BrowseItem />} />
         <Route path="/log" element={<Log />} />
         <Route path="/displaylog" element={<DisplayLog />} />
+        <Route path="/displaylog/:id" element={<LogItem />} />
       </Routes>
       <Nav />
     </Router>
