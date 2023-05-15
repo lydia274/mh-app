@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "name": "Depression",
+    "description": "Depression is a mood disorder characterized by persistent sadness, loss of interest or pleasure, and feelings of worthlessness or guilt.",
+    "symptoms": [
+      "Persistent sadness",
+      "Loss of interest or pleasure",
+      "Feelings of worthlessness or guilt"
+    ],
+    "copingMechanisms": [
+      "Seeking professional help",
+      "Engaging in regular physical activity",
+      "Practicing relaxation techniques"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone. Reach out to your loved ones for support and remember to take it one day at a time."
+  },
+  {
+    "id": 2,
+    "name": "Anxiety",
+    "description": "Anxiety is a mental health condition characterized by excessive worry, fear, or unease. It can manifest as panic attacks, social anxiety, or generalized anxiety disorder.",
+    "symptoms": ["Excessive worry", "Fear or unease", "Panic attacks"],
+    "copingMechanisms": [
+      "Deep breathing exercises",
+      "Practicing mindfulness",
+      "Seeking therapy"
+    ],
+    "cheeringUpMessage": "Remember that you are stronger than your anxiety. Take deep breaths, focus on the present moment, and know that you have the power to overcome it."
+  },
+  {
+    "id": 3,
+    "name": "Bipolar Disorder",
+    "description": "Bipolar disorder is a mental illness characterized by extreme mood swings, ranging from depressive lows to manic highs.",
+    "symptoms": ["Mood swings", "Depressive episodes", "Manic episodes"],
+    "copingMechanisms": [
+      "Maintaining a consistent routine",
+      "Building a strong support network",
+      "Monitoring mood changes"
+    ],
+    "cheeringUpMessage": "Remember that you are not defined by your highs or lows. With proper management and support, you can lead a fulfilling life."
+  },
+  {
+    "id": 4,
+    "name": "Obsessive-Compulsive Disorder (OCD)",
+    "description": "OCD is a mental health disorder characterized by recurring thoughts (obsessions) and repetitive behaviors (compulsions) that an individual feels compelled to perform.",
+    "symptoms": ["Obsessions", "Compulsions", "Fear of contamination"],
+    "copingMechanisms": [
+      "Practicing exposure and response prevention (ERP)",
+      "Seeking therapy",
+      "Developing healthy coping mechanisms"
+    ],
+    "cheeringUpMessage": "Remember that you are stronger than your OCD. With treatment and support, you can manage your symptoms and regain control over your life."
+  },
+  {
+    "id": 5,
+    "name": "Schizophrenia",
+    "description": "Schizophrenia is a chronic mental disorder that affects how a person thinks, feels, and behaves. It is characterized by hallucinations, delusions, and cognitive difficulties.",
+    "symptoms": ["Hallucinations", "Delusions", "Disorganized thinking"],
+    "copingMechanisms": [
+      "Sticking to prescribed medications",
+      "Participating in therapy and support groups",
+      "Developing coping strategies for managing symptoms"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in your journey. Reach out to your support network, follow your treatment plan, and stay hopeful for a brighter future."
+  },
+  {
+    "id": 6,
+    "name": "Post-Traumatic Stress Disorder (PTSD)",
+    "description": "PTSD is a mental health condition that develops after experiencing or witnessing a traumatic event. It can cause flashbacks, nightmares, and severe anxiety.",
+    "symptoms": ["Flashbacks", "Nightmares", "Avoidance of triggers"],
+    "copingMechanisms": [
+      "Seeking therapy (e.g., cognitive-behavioral therapy)",
+      "Practicing grounding techniques",
+      "Building a support network"
+    ],
+    "cheeringUpMessage": "Remember that healing takes time and it's okay to ask for help. You are resilient, and with support, you can overcome the impact of trauma and move forward."
+  },
+
+  {
+    "id": 7,
+    "name": "Major Depressive Disorder",
+    "description": "Major Depressive Disorder is a mental health condition characterized by persistent feelings of sadness, hopelessness, and a loss of interest or pleasure in activities.",
+    "symptoms": [
+      "Persistent sadness",
+      "Loss of interest or pleasure",
+      "Feelings of hopelessness"
+    ],
+    "copingMechanisms": [
+      "Seeking therapy",
+      "Practicing self-care activities",
+      "Building a support network"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in your struggle. Reach out for help, take care of yourself, and remember that brighter days are ahead."
+  },
+  {
+    "id": 8,
+    "name": "Eating Disorders",
+    "description": "Eating disorders are mental illnesses that involve distorted attitudes towards food, body image, and eating behaviors. Common types include anorexia nervosa, bulimia nervosa, and binge eating disorder.",
+    "symptoms": [
+      "Extreme weight loss or gain",
+      "Obsession with food and body image",
+      "Unhealthy eating behaviors"
+    ],
+    "copingMechanisms": [
+      "Seeking professional help from a therapist or dietitian",
+      "Building a positive relationship with food",
+      "Engaging in self-care activities"
+    ],
+    "cheeringUpMessage": "Remember that you are beautiful just the way you are. Your worth is not defined by your appearance. Focus on nourishing your body and embracing self-love."
+  },
+  {
+    "id": 9,
+    "name": "Postpartum Depression",
+    "description": "Postpartum depression is a mood disorder that affects some women after giving birth. It is characterized by feelings of sadness, anxiety, and exhaustion that can interfere with daily functioning and bonding with the baby.",
+    "symptoms": [
+      "Persistent feelings of sadness or emptiness",
+      "Loss of interest or pleasure in activities",
+      "Changes in appetite or sleep patterns"
+    ],
+    "copingMechanisms": [
+      "Seeking professional help from a therapist or doctor",
+      "Building a support system of loved ones",
+      "Taking time for self-care and rest"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in your experience. Reach out for support, take care of yourself, and know that with time and proper care, you can recover and enjoy the journey of motherhood."
+  },
+  {
+    "id": 10,
+    "name": "Social Anxiety Disorder",
+    "description": "Social anxiety disorder is an intense fear of social situations and excessive self-consciousness in social interactions.",
+    "symptoms": [
+      "Fear of judgment or embarrassment",
+      "Avoidance of social situations",
+      "Physical symptoms like rapid heartbeat or sweating"
+    ],
+    "copingMechanisms": [
+      "Gradual exposure to social situations",
+      "Practicing self-compassion and positive self-talk",
+      "Seeking therapy or counseling"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in feeling anxious. Take small steps to face your fears, and know that your voice and presence matter."
+  },
+  {
+    "id": 11,
+    "name": "Panic Disorder",
+    "description": "Panic disorder involves recurrent and unexpected panic attacks, which are sudden periods of intense fear or discomfort.",
+    "symptoms": [
+      "Sudden onset of fear or terror",
+      "Rapid heartbeat",
+      "Shortness of breath"
+    ],
+    "copingMechanisms": [
+      "Deep breathing exercises",
+      "Practicing relaxation techniques",
+      "Seeking therapy"
+    ],
+    "cheeringUpMessage": "Remember that you have the strength to overcome your panic attacks. Focus on your breathing, reach out for support, and believe in your ability to manage anxiety."
+  },
+  {
+    "id": 12,
+    "name": "Substance Use Disorder",
+    "description": "Substance use disorder refers to a problematic pattern of using alcohol or drugs that leads to significant impairment or distress.",
+    "symptoms": [
+      "Loss of control over substance use",
+      "Neglecting responsibilities",
+      "Withdrawal symptoms"
+    ],
+    "copingMechanisms": [
+      "Seeking professional addiction treatment",
+      "Attending support groups (e.g., Alcoholics Anonymous)",
+      "Building a healthy routine and support system"
+    ],
+    "cheeringUpMessage": "Remember that recovery is possible, and you are not defined by your past struggles. Embrace the journey of sobriety, surround yourself with positive influences, and celebrate each step forward."
+  },
+  {
+    "id": 13,
+    "name": "Autism Spectrum Disorder (ASD)",
+    "description": "ASD is a neurodevelopmental disorder that affects social interaction, communication, and behavior. It is characterized by a wide range of symptoms and challenges.",
+    "symptoms": [
+      "Difficulty with social interactions",
+      "Repetitive behaviors or restricted interests",
+      "Sensory sensitivities"
+    ],
+    "copingMechanisms": [
+      "Creating predictable routines",
+      "Using visual supports (e.g., schedules, social stories)",
+      "Accessing specialized therapies and support services"
+    ],
+    "cheeringUpMessage": "Remember that your unique strengths and perspective make you extraordinary. Embrace your individuality, and know that you are valued just as you are."
+  },
+  {
+    "id": 14,
+    "name": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    "description": "ADHD is a neurodevelopmental disorder characterized by inattention, hyperactivity, and impulsivity that can interfere with daily functioning and development.",
+    "symptoms": ["Inattention", "Hyperactivity", "Impulsivity"],
+    "copingMechanisms": [
+      "Creating structure and routines",
+      "Breaking tasks into manageable steps",
+      "Using organizational tools"
+    ],
+    "cheeringUpMessage": "Remember that ADHD does not define your worth. Embrace your unique strengths, seek support, and celebrate your accomplishments along the way."
+  },
+
+  {
+    "id": 15,
+    "name": "Eating Disorders",
+    "description": "Eating disorders are mental illnesses that involve distorted attitudes towards food, body image, and eating behaviors. Common types include anorexia nervosa, bulimia nervosa, and binge eating disorder.",
+    "symptoms": [
+      "Extreme weight loss or gain",
+      "Obsession with food and body image",
+      "Unhealthy eating behaviors"
+    ],
+    "copingMechanisms": [
+      "Seeking professional help from a therapist or dietitian",
+      "Building a positive relationship with food",
+      "Engaging in self-care activities"
+    ],
+    "cheeringUpMessage": "Remember that you are more than your appearance. Focus on nourishing your body, practicing self-love, and seeking support to overcome the challenges of an eating disorder."
+  },
+  {
+    "id": 16,
+    "name": "Borderline Personality Disorder (BPD)",
+    "description": "BPD is a mental health disorder characterized by unstable moods, impulsive behavior, and difficulties in relationships.",
+    "symptoms": [
+      "Fear of abandonment",
+      "Intense mood swings",
+      "Impulsive and self-destructive behaviors"
+    ],
+    "copingMechanisms": [
+      "Participating in dialectical behavior therapy (DBT)",
+      "Developing emotion regulation techniques",
+      "Building a support system"
+    ],
+    "cheeringUpMessage": "Remember that you are worthy of love and support. Keep working on developing healthy coping mechanisms, and know that healing is possible."
+  },
+  {
+    "id": 17,
+    "name": "Social Anxiety Disorder",
+    "description": "Social anxiety disorder is an intense fear of social situations and excessive self-consciousness in social interactions.",
+    "symptoms": [
+      "Fear of judgment or embarrassment",
+      "Avoidance of social situations",
+      "Physical symptoms like rapid heartbeat or sweating"
+    ],
+    "copingMechanisms": [
+      "Gradual exposure to social situations",
+      "Practicing self-compassion and positive self-talk",
+      "Seeking therapy or counseling"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in feeling anxious. Take small steps to face your fears, and know that your voice and presence matter."
+  },
+  {
+    "id": 18,
+    "name": "Panic Disorder",
+    "description": "Panic disorder involves recurrent and unexpected panic attacks, which are sudden periods of intense fear or discomfort.",
+    "symptoms": [
+      "Sudden onset of fear or terror",
+      "Rapid heartbeat",
+      "Shortness of breath"
+    ],
+    "copingMechanisms": [
+      "Deep breathing exercises",
+      "Practicing relaxation techniques",
+      "Seeking therapy"
+    ],
+    "cheeringUpMessage": "Remember that you have the strength to overcome your panic attacks. Focus on your breathing, reach out for support, and believe in your ability to manage anxiety."
+  },
+  {
+    "id": 19,
+    "name": "Opioid Use Disorder",
+    "description": "Opioid use disorder is a condition characterized by a problematic pattern of opioid use, leading to significant distress or impairment.",
+    "symptoms": [
+      "Cravings for opioids",
+      "Loss of control over opioid use",
+      "Withdrawal symptoms"
+    ],
+    "copingMechanisms": [
+      "Seeking professional addiction treatment",
+      "Attending support groups (e.g., Narcotics Anonymous)",
+      "Building a strong support system"
+    ],
+    "cheeringUpMessage": "Remember that recovery is a journey, and you are not alone in it. Reach out for help, stay committed to your treatment, and believe in your ability to overcome opioid use disorder."
+  },
+  {
+    "id": 20,
+    "name": "Schizoaffective Disorder",
+    "description": "Schizoaffective disorder is a chronic mental illness characterized by a combination of symptoms of schizophrenia, such as hallucinations or delusions, and mood disorder symptoms, such as depressive or manic episodes.",
+    "symptoms": ["Hallucinations", "Delusions", "Mood swings"],
+    "copingMechanisms": [
+      "Following prescribed medication regimen",
+      "Participating in therapy and support groups",
+      "Building a strong support network"
+    ],
+    "cheeringUpMessage": "Remember that you are not alone in your journey. Stay connected to your support system, continue with your treatment plan, and have hope for a brighter future."
+  }
+]
