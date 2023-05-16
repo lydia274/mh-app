@@ -7,8 +7,8 @@ function Nav() {
       <main>
         <Outlet />
       </main>
-      <nav>
-        <ul className="flex">
+      <nav className="nav-box">
+        <ul className="flex menu">
           <li>
             <Link to={"/"}>Home</Link>
           </li>

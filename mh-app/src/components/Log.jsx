@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import DisplayLog from "../pages/DisplayLog";
+import React, { useState, useEffect } from "react"
+import axios from "axios"
+import DisplayLog from "../pages/DisplayLog"
 
 const Log = () => {
   const [form, setForm] = useState({
@@ -9,7 +9,7 @@ const Log = () => {
     gratitude: "",
     mood: 0,
     items: {},
-  });
+  })
 
   const itemsList = [
     "Get support",
@@ -22,32 +22,32 @@ const Log = () => {
     "Build a support system",
     "Monitor your mood",
     "Face your fears",
-  ];
+  ]
 
-  const [logs, setLogs] = useState([]);
+  const [logs, setLogs] = useState([])
   useEffect(() => {
     axios
       .get("https://ironrest.fly.dev/api/mh-app-log")
       .then((response) => setLogs(response.data))
-      .catch((error) => console.error(error));
-  }, []);
+      .catch((error) => console.error(error))
+  }, [])
 
   const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
-    });
-  };
+    })
+  }
 
   const handleButtonClick = (item) => {
     setForm((prevState) => ({
       ...prevState,
       items: { ...prevState.items, [item]: !prevState.items[item] },
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     const newLogEntry = {
       date: form.date,
@@ -55,29 +55,29 @@ const Log = () => {
       gratitude: form.gratitude,
       mood: form.mood,
       items: itemsList.filter((item) => form.items[item]),
-    };
+    }
 
     try {
       const response = await axios.post(
         "https://ironrest.fly.dev/api/mh-app-log",
         newLogEntry
-      );
-      console.log(response.data);
+      )
+      console.log(response.data)
       setForm({
         date: "",
         thoughts: "",
         gratitude: "",
         mood: 0,
         items: {},
-      });
+      })
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
-  };
+  }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="form-container">
+      <form className="log-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="date">Date:</label>
           <input
@@ -86,6 +86,7 @@ const Log = () => {
             name="date"
             value={form.date}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
@@ -95,6 +96,7 @@ const Log = () => {
             name="thoughts"
             value={form.thoughts}
             onChange={handleChange}
+            required
           />
         </div>
         <div>
@@ -135,10 +137,12 @@ const Log = () => {
           ))}
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="learn-more-button">
+          Submit
+        </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Log;
+export default Log

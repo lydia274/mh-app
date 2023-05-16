@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
 
 const DisplayLog = () => {
-  const [logs, setLogs] = useState([]);
+  const [logs, setLogs] = useState([])
 
   useEffect(() => {
     const fetchLogs = async () => {
       try {
         const response = await axios.get(
           "https://ironrest.fly.dev/api/mh-app-log"
-        );
-        setLogs(response.data);
+        )
+        setLogs(response.data)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       }
-    };
+    }
 
     //const { logId } = useParams();
 
-    fetchLogs();
-  }, []);
+    fetchLogs()
+  }, [])
 
   return (
     <div className="flex">
       {logs.map((log, idx) => (
-        <div key={idx} className="border tile">
+        <div key={idx} className="border box">
           <h2>Date: {log.date}</h2>
           <p>Thoughts: {log.thoughts}</p>
           <p>Mood: {log.mood}</p>
@@ -37,11 +37,14 @@ const DisplayLog = () => {
             </ul>
           )}
           {console.log(log._id)}
-          <Link to={`/displaylog/${log._id}`}> Learn more </Link>
+          <Link to={`/displaylog/${log._id}`} className="learn-more-button">
+            {" "}
+            Learn more{" "}
+          </Link>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default DisplayLog;
+export default DisplayLog
