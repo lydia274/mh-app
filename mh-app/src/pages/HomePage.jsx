@@ -61,7 +61,7 @@ function HomePage() {
         <Breath />
       </div>
       <div>
-        Here is one thing to make you happy today:{" "}
+        Here is one thing to make you happier today:{" "}
         {randomMessage || "Gratitude!"}
       </div>
     </div>

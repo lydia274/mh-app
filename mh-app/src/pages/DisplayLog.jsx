@@ -26,7 +26,7 @@ const DisplayLog = () => {
     <div className="flex">
       {logs.map((log, idx) => (
         <div key={idx} className="border box">
-          <h2>Date: {log.date}</h2>
+          <h2>{formatDate(log.date)}</h2>
           <p>Thoughts: {log.thoughts}</p>
           <p>Mood: {log.mood}</p>
           {log.items && (
@@ -45,6 +45,12 @@ const DisplayLog = () => {
       ))}
     </div>
   )
+
+  function formatDate(dateString) {
+    const options = { month: "long", day: "numeric", year: "numeric" }
+    const date = new Date(dateString).toLocaleDateString(undefined, options)
+    return date
+  }
 }
 
 export default DisplayLog
