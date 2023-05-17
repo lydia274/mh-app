@@ -16,7 +16,7 @@ function BrowseItem() {
   }, [])
 
   return (
-    <div className="border">
+    <div className="border" id="browse-box">
       <h2>{item.name}</h2>
       <p>{item.description}</p>
       <h4>Common symptoms</h4>

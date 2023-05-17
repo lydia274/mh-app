@@ -25,7 +25,7 @@ const DisplayLog = () => {
   return (
     <div className="flex">
       {logs.map((log, idx) => (
-        <div key={idx} className="border box">
+        <div key={idx} className="border box" id="log-box">
           <h2>{formatDate(log.date)}</h2>
           <p>Thoughts: {log.thoughts}</p>
           <p>Mood: {log.mood}</p>

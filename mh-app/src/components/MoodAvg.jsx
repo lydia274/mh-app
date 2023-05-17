@@ -33,7 +33,7 @@ const MoodAvg = () => {
 
   return (
     <div>
-      <p>{averageMood.toFixed(2)}/10</p>
+      <p id="mood">{averageMood.toFixed(2)}/10</p>
     </div>
   )
 }

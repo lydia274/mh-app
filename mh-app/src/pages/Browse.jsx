@@ -23,7 +23,7 @@ function Browse() {
         {data.map((item) => {
           //itearating over the array of objects to display each item
           return (
-            <div key={item.id} className="border box">
+            <div key={item.id} className="border box" id="browse-box">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
               <Link to={`/browse/${item.id}`} className="learn-more-button">

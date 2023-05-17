@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@300;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@300&display=swap");
 
 @media (prefers-color-scheme: dark) {
-  color: white;
+  * {
+    color: white;
+  }
 }
 
 * {
-  color: blue;
+  color: black;
 }
 
 /* general items */
@@ -17,6 +20,37 @@ h2,
 h3,
 h4 {
   font-family: "Londrina Solid", cursive;
+}
+
+#mood {
+  font-weight: 900;
+  font-family: "Londrina Solid", cursive;
+}
+#top-bar {
+  margin-top: 0;
+  width: 100%;
+  background-color: aquamarine;
+
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+#sos {
+  border: solid 1px red;
+  padding: 2px 5px;
+}
+#gratitude {
+  width: 20rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#gratitude > span {
+  display: inline-block;
+  word-wrap: break-word;
 }
 
 .learn-more-button {
@@ -42,41 +76,80 @@ h4 {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+
   flex-wrap: wrap;
 }
 
+#browse-box {
+  background: #81b698;
+  border: 2px solid #15ad1f;
+  border-radius: 27.584px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#log-box {
+  background: #74cee2;
+  border: 2px solid #58315a;
+  border-radius: 27.584px;
+}
+
 /*normal phones*/
-.box {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
+
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .hp-field,
+  .breath-field {
+    flex-basis: 100%;
+  }
+
+  .form-container > h1 {
+    word-wrap: break-word;
+  }
 }
 
 /*large phones*/
 @media (min-width: 576px) {
   .box {
-    width: 50%;
+    width: 90%;
+    margin: 0 auto;
   }
-  font-size: 18px;
+
+  .hp-field,
+  .breath-field {
+    flex: 1 1 100%;
+  }
+  .form-container > h1 {
+    word-wrap: break-word;
+  }
 }
 
 /*  desktop  */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   body {
     font-size: 14px;
   }
   .box {
     width: 20rem;
-    padding: 20px;
+    padding: 1rem;
     box-sizing: border-box;
+    margin: 0.2rem;
   }
 
   .main-div {
-    height: 80vh;
+    max-width: 100%;
     width: 80%;
-    max-width: 800px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10rem;
+    height: 85vh;
+    top: 0;
+    position: relative;
   }
 }
 
@@ -135,17 +208,31 @@ h4 {
 
 .breath-field {
   position: relative;
-  width: 30vw;
-  height: 30vh;
-  overflow: hidden;
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  flex: 1 1 50%;
+  background-color: yellowgreen;
+  border: solid 2px yellow;
+  /* margin: 2rem; */
+  /* overflow: hidden; */
+}
+
+.hp-field {
+  width: 10rem;
+  height: auto;
+  margin: 1rem;
+
+  flex: 1 1 30%;
+
+  min-width: 0;
 }
 
 .breath-field p {
   font-family: "Londrina Outline", cursive;
-  color: #23ae89;
+  color: white;
   font-size: 3em;
-  text-align: center;
-  margin-top: 15%;
+  margin-top: 15% auto;
 }
 
 .circle {
@@ -212,14 +299,14 @@ nav ul li a:hover {
 }
 
 /* form styling */
-
 .form-container {
-  max-width: 500px;
+  max-width: 30rem;
   width: 90%;
   margin: 0 auto;
-  padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .form-container label {

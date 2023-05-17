@@ -35,36 +35,40 @@ function HomePage() {
       }
     }
 
-    const intervalId = setInterval(updateMessage, 4000)
+    const intervalId = setInterval(updateMessage, 3000)
 
     return () => clearInterval(intervalId)
   }, [gratitudeMessages])
 
   return (
-    <div className="main-div border">
-      <div className="border flex">
-        <div>
+    <>
+      <div className="main-div border">
+        <div id="top-bar">
           <MoodAvg />
+          <div>
+            <button id="sos">SOS</button>
+          </div>
         </div>
-        <div>
-          <button>SOS</button>
-        </div>
-      </div>
-      <div className="border">
-        <h1>Hello there!</h1>
-        <p>
-          Welcome to your mental health wellness app. Embrace well-being
-          together. Explore, breathe, express. Join us this Mental Health
-          Awareness Month.
-        </p>
+        <div className="border flex">
+          <div className="hp-field">
+            <h1>Hello there!</h1>
+            <p>
+              Welcome to your mental health wellness app. Embrace well-being
+              together. Explore, breathe, express. Join us this Mental Health
+              Awareness Month.
+            </p>
+          </div>
 
-        <Breath />
+          <Breath />
+          <div id="gratitude">
+            <span>
+              Here is one thing to make you happier today:{" "}
+              {randomMessage || "Gratitude!"}
+            </span>
+          </div>
+        </div>
       </div>
-      <div>
-        Here is one thing to make you happier today:{" "}
-        {randomMessage || "Gratitude!"}
-      </div>
-    </div>
+    </>
   )
 }
 
