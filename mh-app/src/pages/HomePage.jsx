@@ -45,6 +45,7 @@ function HomePage() {
       <div className="main-div border">
         <div id="top-bar">
           <MoodAvg />
+          <div id="boldtext">MindGlass</div>
           <div>
             <button id="sos">SOS</button>
           </div>

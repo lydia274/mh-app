@@ -22,7 +22,7 @@ const LogItem = () => {
   }, [id])
 
   return (
-    <div className="box">
+    <div className="box" id="log-box">
       <h2>{formatDate(log.date)}</h2>
       <p>Thoughts: {log.thoughts}</p>
       <p>Mood: {log.mood}</p>
