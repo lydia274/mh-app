@@ -10,7 +10,7 @@ function Browse() {
     setItems(data)
   }, [])
 
-  console.log(data.length)
+  // console.log(data.length)
 
   //"loading" or eventually a spinner for when loading is in progress
   if (!data.length) {
