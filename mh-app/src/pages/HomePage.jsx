@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import MoodAvg from "../components/moodAvg.jsx"
+import MoodAvg from "../components/MoodAvg.jsx"
 import axios from "axios"
 import Breath from "../components/Breath.jsx"
 
